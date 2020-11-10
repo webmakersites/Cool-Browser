@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="browser.css">
+    <script src="config.js"></script>
+    <script src="popup.js"></script>
+    <script src="tabs.js"></script>
+    <script src="browser.js"></script>
+    <script src="browser_main.js"></script>
+<style>
+
+
+/* fallback */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(google_icons.woff2) format('woff2');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+.link {
+text-decoration: none;
+color: black;
+
+}
+/*MENU DROP DOWN START */ 
+.dropdown-content {
+  display: none;
+
+
+    
+  background-color: white;
+ 
+
+}
+
+.dropdown:hover .dropdown-content {
+  display: inline;
+}
+.menu-item{
+list-style-type: none;
+color: black;
+format: none;
+text-decoration: none;
+font-family: 'Segoe UI', Tahoma, sans-serif;
+font-size: 12px;
+cursor: pointer;
+display: inline;
+list-style-type: none;
+}
+.menu-item:hover {
+background: #dbd9d9;
+
+
+}
+/*MENU DROP DOWN END */ 
+
+</style>
+  </head>
+  <body>
+    <div id="controls">
+
+      <div id="tab-controls">
+        <ul id="tab-container">
+          <li id="new-tab"><a class="material-icons new-tab" href="#new-tab">&nbsp;add</a></li>
+        </ul>
+      </div>
+
+      <div id="browser-controls">
+        <button style="font-size: 24px;" class="material-icons" id="back" title="Back">arrow_back</button>
+        <button style="font-size: 24px;" class="material-icons" id="forward" title="Forward">arrow_forward</button>
+        <button class="material-icons" id="home" title="Home">home</button>
+        <button class="material-icons" id="reload" title="Reload">refresh</button>
+
+
+        <form id="location-form">
+          <div id="center-column">
+            <input id="location" type="text" value="">
+          </div>
+          <input style="font-size: 24px;" class="material-icons" type="submit" value="input" title="Go">
+        </form>
+
+
+<div class="dropdown">
+  <a class="dropbtn"><a  class="material-icons">more_vert</a></a>
+
+<div class="dropdown-content">
+    <a class="menu-item" onclick='window.print();'>Print</a>
+    <a class="menu-item"  target="_blank" rel="noopener" href="https://google.com">About Cool Browser (Version 2.0)</a>
+    <a class="menu-item"  target="_blank" rel="noopener" href="#">Help</a>
+  </div>
+</div>
+
+
+</div>
+
+      
+</div>
+    
+
+    <div id="content-container">
+    </div>
+
+  </body>
+</html>
